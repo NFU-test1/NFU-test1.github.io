@@ -4,22 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carbon Rights</title>
-    <style>
-      @media screen and(max-width: 414px) {
-        img{
-        width: 100vw;
-        height:auto;
-      }
-      }
-      </style>
   </head>
-  <body>
+  <body style="background-color: black;">
     <div align="center">
+      <div id="date" style="top:70px;left: 280px;position: relative;color: aliceblue; font-size: 45px;width: 400px;">H:M:S</div>
       <img src="images/kline.png"  usemap="#image-map">
       <map name="image-map">
         <area target="" alt="下單" title="下單" href="index4.html" coords="460,112,726,230" shape="rect">
         <area target="" alt="" title="" href="index.html" coords="23,23,151,69" shape="rect">
     </map>
     </div>
+    <script>
+      function Time(){
+        time = new Date();
+        h = time.getHours();
+        m = time.getMinutes();
+        s = time.getSeconds();
+        document.getElementById('date').innerHTML = h+":"+m+":"+s;
+      }
+      window.setInterval(( () => Time() ), 1000);
+    </script>
   </body>
 </html>

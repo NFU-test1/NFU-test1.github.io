@@ -7,7 +7,7 @@
   </head>
   <body style="background-color: black;">
     <div align="center">
-      <div id="date" style="top:70px;right: 280px;position: relative;color: aliceblue; font-size: 45px;width: 400px;">H:M:S</div>
+      <div id="date" style="top:70px;right: 280px;position: relative;color: aliceblue; font-size: 45px;width: 400px;"></div>
       <img src="images/price_volume.png" usemap="#image-map">
       <map name="image-map">
         <area target="" alt="下單" title="下單" href="index4.html" coords="456,114,728,229" shape="rect">
@@ -25,6 +25,7 @@
         s = time.getSeconds();
         document.getElementById('date').innerHTML = h+":"+m+":"+s;
       }
+      Time();
       window.setInterval(( () => Time() ), 1000);
     </script>
   </body>
